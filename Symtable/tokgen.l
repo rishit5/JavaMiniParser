@@ -49,7 +49,7 @@
 %}
 %%
 
-"import"(.)*"\n" 
+"import"(.)*"\n"
 {
 	l++;
 }
@@ -125,14 +125,14 @@
 	else if(yytext[0] == '{')
 		scope++;
 	else if(yytext[0] == '}')
-		scope--;	
+		scope--;
 	c++;
 	return tp;
 }
 %%
 int main(int argc, char **argv)
 {
-	yyin = fopen("/home/rishitratan/Semester 6-/Semester 6/CD/LabProject/first.java", "r");
+	yyin = fopen("/home/skylather/Desktop/JavaMiniParser/first.java", "r");
 	Tokenptr tk;
 	printf("<Lexeme, Row, Col, Index, Type>\n");
 	while(tk = yylex())

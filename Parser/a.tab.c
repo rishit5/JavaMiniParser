@@ -1776,13 +1776,13 @@ int yyerror(YYLTYPE *locp, char const *msg){
 	printf("Invalid Expression: %s \nAT LINE NUMBER %d \n", msg, lineno);
 	return 1;
 }
-void main(){
-	yyin = fopen("/home/rishitratan/Semester 6-/Semester 6/CD/LabProject/first.java", "r");
+int main(){
+	yyin = fopen("/home/skylather/Desktop/JavaMiniParser/first.java", "r");
 	do{
 		if(yyparse()){
 			exit(0);
 		}
 	}while(!feof(yyin));
 	printf("No errors, Program successefully Parsed.\n");
+    return 1;
 }
-
